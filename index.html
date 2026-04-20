@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 Skills Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    body{
+        background-image: url("https://i.pinimg.com/1200x/6d/e4/9a/6de49a938f344f0937f63f75417839b2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+    }
+
+    .main-card{
+        background: rgba(0,0,0,0.45); 
+
+        border-radius: 20px;
+        padding: 40px;
+        margin-top: 80px;
+        max-width: 400px;
+    }
+ </style>
+
+</head>
+<body>
+    <center>
+        <div class="container d-flex justify-content-center">
+                <div class="main-card">
+
+        <h1 class="text-center mb-4">Log In</h1>
+
+    <form onsubmit="return loginAccount()">
+        <label>Username:</label>
+    <br>
+
+    <input type="text" id="user" placeholder="Username..." class="form-control rounded">
+<br>
+    <label>Password:</label>
+<br>
+
+    <input type="text" id="pass" placeholder="******" class="form-control rounded">
+<br><br>
+        <button type="submit" class="btn btn-primary w-100">Log In</button>
+
+</form>
+        </div>
+</div>
+</center>
+
+
+
+<script>
+
+    function loginAccount(){
+        var username = document.getElementById("user").value;
+        var password = document.getElementById("pass").value;
+        var correct_user = "erinmisseshim67";
+        var correct_pass = "imdagoat200";
+
+    switch(true){
+
+    case (username == correct_user && password == correct_pass):
+        alert("Welcome " + username + "!");
+    break;
+
+    case (username == "" || password == ""):
+     alert("Please enter username and password.");
+    break;
+
+    default:
+        alert("Incorrect username and/or password.");
+    break;
+
+ }
+
+return false;
+
+}
+
+// start with function
+
+function function_name(){
+
+do {
+        
+        if (username === "" && password === "") {
+            alert();
+            attempt_counter = 0; // reset after success
+            document.getElementById("").innerHTML = "";
+            window.location.href = "notebooks.html"; //go to second page
+            break; // stop loop
+        } else {
+            attempt_counter++;
+            document.getElementById("").innerHTML =
+                "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
+        }
+
+    } while (false); 
+
+    if (attempt_counter >= 3) {
+        alert();
+        document.getElementById("").disabled = true; // lock button
+    }
+}
+</script>
+
+</body>
+</html>
