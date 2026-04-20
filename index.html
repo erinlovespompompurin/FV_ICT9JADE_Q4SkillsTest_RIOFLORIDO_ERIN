@@ -17,7 +17,6 @@
 
     .main-card{
         background: rgba(0,0,0,0.45); 
-
         border-radius: 20px;
         padding: 40px;
         margin-top: 80px;
@@ -29,87 +28,91 @@
 <body>
     <center>
         <div class="container d-flex justify-content-center">
-                <div class="main-card">
+            <div class="main-card">
 
-        <h1 class="text-center mb-4">Log In</h1>
+                <h1 class="text-center mb-4">Log In</h1>
 
-    <form onsubmit="return loginAccount()">
-        <label>Username:</label>
-    <br>
+                <form onsubmit="return loginAccount()">
+                    <label>Username:</label>
+                    <br>
+                    <input type="text" id="user" placeholder="Username..." class="form-control rounded">
+                    
+                    <br>
+                    
+                    <label>Password:</label>
+                    <br>
+                    <input type="text" id="pass" placeholder="******" class="form-control rounded">
+                    
+                    <br><br>
 
-    <input type="text" id="user" placeholder="Username..." class="form-control rounded">
-<br>
-    <label>Password:</label>
-<br>
+                    <button type="submit" class="btn btn-primary w-100">Log In</button>
+                </form>
 
-    <input type="text" id="pass" placeholder="******" class="form-control rounded">
-<br><br>
-
-        <button a nav-link href=notebooks.html type="submit" class="btn btn-primary w-100">Log In</button>
-        
-
-</form>
+            </div>
         </div>
-</div>
-</center>
-
-
+    </center>
 
 <script>
 
-    function loginAccount(){
-        var username = document.getElementById("user").value;
-        var password = document.getElementById("pass").value;
-        var correct_user = "erinmisseshim67";
-        var correct_pass = "imdagoat200";
+var attempt_counter = 0;
+
+function loginAccount(){
+    var username = document.getElementById("user").value;
+    var password = document.getElementById("pass").value;
+    var correct_user = "erinmisseshim67";
+    var correct_pass = "imdagoat200";
 
     switch(true){
 
-    case (username == correct_user && password == correct_pass):
-        alert("Welcome " + username + "!");
-    break;
+        case (username == correct_user && password == correct_pass):
+            alert("Welcome " + username + "!");
+            attempt_counter = 0;
+            window.location.href = "notebooks.html"; 
+        break;
 
-    case (username == "" || password == ""):
-     alert("Please enter username and password.");
-    break;
+        case (username == "" || password == ""):
+            alert("Please enter username and password.");
+        break;
 
-    default:
-        alert("Incorrect username and/or password.");
-    break;
+        default:
+            attempt_counter++;
+            alert("Incorrect username and/or password. Attempt " + attempt_counter + " of 3");
 
- }
+            if (attempt_counter >= 3){
+                document.querySelector("button").disabled = true;
+                alert("Too many failed attempts. Login locked.");
+            }
+        break;
+    }
 
-return false;
-
+    return false;
 }
 
 
 function function_name(){
 
-//declare variables for retrieving input field values and variables for granted and denied messages.
+    var username = document.getElementById("user").value;
+    var password = document.getElementById("pass").value;
 
-do {
+    do {
         
-        if (username === "" && password === "") {
-            alert();
-            attempt_counter = 0; // reset after success
-            document.getElementById("").innerHTML = "";
-            window.location.href = "notebooks.html"; //go to second page
-            break; // stop loop
+        if (username === "erinmisseshim67" && password === "imdagoat200") {
+            alert("Welcome " + username + "!");
+            attempt_counter = 0;
+            window.location.href = "notebooks.html";
+            break;
         } else {
             attempt_counter++;
-            document.getElementById("").innerHTML =
-                "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
+            alert("Incorrect username and/or password. Attempt " + attempt_counter + " of 3");
         }
 
     } while (false); 
 
     if (attempt_counter >= 3) {
-        alert();
-        document.getElementById("").disabled = true; // lock button
+        alert("Too many failed attempts. Login locked.");
+        document.querySelector("button").disabled = true;
     }
 }
-
 
 </script>
 
