@@ -3,48 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notebooks</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-     <style>
-        .d-flex {
-             background-image: url("https://w0.peakpx.com/wallpaper/432/352/HD-wallpaper-white-snow-mac-os.jpg");
-        }
+    <title>Notebooks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        h1 {
-            
-        }
-     </style>
+<style>
+    body {
+        margin: 0;
+       background-image: url("https://applescoop.org/image/wallpapers/mac/soft-gradient-white-29-09-2024-1727597249-hd-wallpaper.jpeg");
+    }
 
+    .main-container {
+        display: flex;
+        min-height: 100vh;
+        
+    }
+
+    .sidebar {
+        width: 200px;
+        background-color: #1f2933;
+        color: white;
+        padding: 20px;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 5px;
+    }
+
+
+    .content {
+        flex: 1;
+        padding: 30px;
+    }
+
+
+    .title-box {
+        display: inline-block;
+        background-color: #1f2933;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+    .subject-card {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .subject-card h5 {
+        margin: 0;
+    }
+
+    .subject-card p {
+        margin: 0;
+        font-size: 14px;
+        color: gray;
+    }
+</style>
 </head>
 <body>
- 
-    <div class="d-flex">
-
-    <nav class="bg-dark text-white p-3 vh-100" style="width: 200px;">
-     <h4>Menu</h4>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Class List</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Files</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Calendar</a>
-            </li>
-        </ul>
-    </nav>
-
-
-    <div class="p-4" style="flex: 1;">
-        <h1>Virtual Notebooks</h1>
-        <p>Select a Subject</p>
-    </div>
-
-</div>
 
 <div class="main-container">
 
@@ -55,10 +79,9 @@
         <li><a class="nav-link" href="#">Virtual Notebooks</a></li>
         <li><a class="nav-link" href="#">Tasks</a></li>
         <li><a class="nav-link" href="#">Profile</a></li>
-        <li><a class="nav-link" href="#">Logout</a></li>
+        <li><a class="nav-link" href="index.html">Logout</a></li>
     </ul>
 </div>
-
 
 <div class="content">
 
@@ -114,12 +137,7 @@
     </div>
 
 </div>
-
 </div>
 
-</body>
-</html>
-
-    
 </body>
 </html>
